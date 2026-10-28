@@ -1,0 +1,9 @@
+replicaCount: 2
+springProfile: prod
+service:
+  type: LoadBalancer
+env:
+  LOG_LEVEL: WARN
+resources:
+  requests: { cpu: 100m, memory: 200Mi }
+  limits:   { cpu: 700m, memory: 512Mi }
