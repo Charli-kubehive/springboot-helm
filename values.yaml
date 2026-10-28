@@ -22,3 +22,14 @@ resources:
   limits:
     cpu: 500m
     memory: 512Mi
+
+ingress:
+  enabled: true
+  className: nginx
+  host: springboot.local
+  path: /
+  annotations: {}
+
+secret:
+  DB_PASSWORD: changeme
+  API_KEY: changeme

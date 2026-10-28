@@ -60,3 +60,13 @@ Create the name of the service account to use
 {{- default "default" .Values.serviceAccount.name }}
 {{- end }}
 {{- end }}
+
+{{/* Reusable name for the ConfigMap */}}
+{{- define "springboot-app.configMapName" -}}
+{{ include "springboot-app.fullname" . }}-config
+{{- end }}
+
+{{/* Reusable name for the Secret */}}
+{{- define "springboot-app.secretName" -}}
+{{ include "springboot-app.fullname" . }}-secret
+{{- end }}

@@ -11,6 +11,9 @@ spec:
       {{- include "springboot-app.selectorLabels" . | nindent 6 }}
   template:
     metadata:
+      annotations:
+        checksum/config: {{ include (print $.Template.BasePath "/configmap.yaml") . | sha256sum }}
+        checksum/secret: {{ include (print $.Template.BasePath "/secret.yaml") . | sha256sum }}
       labels:
         {{- include "springboot-app.selectorLabels" . | nindent 8 }}
     spec:
@@ -20,13 +23,11 @@ spec:
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
             - containerPort: {{ .Values.containerPort }}
-          env:
-            - name: SPRING_PROFILES_ACTIVE
-              value: {{ .Values.springProfile | quote }}
-            {{- range $key, $value := .Values.env }}
-            - name: {{ $key }}
-              value: {{ $value | quote }}
-            {{- end }}
+          envFrom:
+            - configMapRef:
+                name: {{ include "springboot-app.configMapName" . }}
+            - secretRef:
+                name: {{ include "springboot-app.secretName" . }}
           readinessProbe:
             httpGet:
               path: /actuator/health/readiness

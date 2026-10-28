@@ -7,3 +7,8 @@ env:
 resources:
   requests: { cpu: 100m, memory: 200Mi }
   limits:   { cpu: 700m, memory: 512Mi }
+ingress:
+  host: springboot.example.com
+secret:
+  DB_PASSWORD: prod-password-123
+  API_KEY: prod-api-key

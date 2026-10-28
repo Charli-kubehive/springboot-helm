@@ -5,3 +5,8 @@ env:
 resources:
   requests: { cpu: 100m, memory: 200Mi }
   limits:   { cpu: 500m, memory: 512Mi }
+ingress:
+  host: qa.springboot.local
+secret:
+  DB_PASSWORD: qa-password-123
+  API_KEY: qa-api-key
