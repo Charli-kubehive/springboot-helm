@@ -6,7 +6,7 @@ resources:
   requests: { cpu: 100m, memory: 200Mi }
   limits:   { cpu: 500m, memory: 512Mi }
 ingress:
-  enabled: true
+  enabled: false
   host: drift.springboot.local
 secret:
   DB_PASSWORD: drift-password
