@@ -1,7 +1,7 @@
 replicaCount: 1
 springProfile: broken
 image:
-  tag: "1.0.0"
+  tag: "9.9.9"
 env:
   LOG_LEVEL: INFO
 resources:
