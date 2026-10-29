@@ -1,4 +1,4 @@
-replicaCount: 2
+replicaCount: 1
 springProfile: dev
 env:
   LOG_LEVEL: WARN
