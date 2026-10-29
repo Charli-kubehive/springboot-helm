@@ -9,3 +9,4 @@ data:
   {{- range $key, $value := .Values.env }}
   {{ $key }}: {{ $value | quote }}
   {{- end }}
+  APP_ENVIRONMENT: {{ .Values.environment | quote }}

@@ -33,3 +33,5 @@ ingress:
 secret:
   DB_PASSWORD: changeme
   API_KEY: changeme
+
+environment: default

@@ -10,3 +10,5 @@ ingress:
 secret:
   DB_PASSWORD: dev-password-123
   API_KEY: dev-api-key
+
+environment: dev

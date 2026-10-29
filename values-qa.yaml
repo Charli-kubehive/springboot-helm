@@ -10,3 +10,5 @@ ingress:
 secret:
   DB_PASSWORD: qa-password-123
   API_KEY: qa-api-key
+
+environment: qa

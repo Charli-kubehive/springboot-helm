@@ -12,3 +12,5 @@ ingress:
 secret:
   DB_PASSWORD: prod-password-123
   API_KEY: prod-api-key
+
+environment: prod
