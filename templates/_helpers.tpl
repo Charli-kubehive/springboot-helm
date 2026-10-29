@@ -68,5 +68,6 @@ Create the name of the service account to use
 
 {{/* Reusable name for the Secret */}}
 {{- define "springboot-app.secretName" -}}
-{{ include "springboot-app.fullname" . }}-secret
+{{- if .Values.existingSecret }}{{ .Values.existingSecret }}{{- else }}{{ include "springboot-app.fullname" . }}-secret{{- end }}
 {{- end }}
+
