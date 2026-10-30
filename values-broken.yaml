@@ -9,3 +9,6 @@ resources:
 ingress:
   enabled: true
   host: drift.springboot.local
+
+image:
+  tag: "9.9.9"
