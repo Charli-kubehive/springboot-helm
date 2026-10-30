@@ -13,4 +13,4 @@ environment: dev
 
 
 image:
-  tag: "1.0.0"
+  tag: "09049ff"
