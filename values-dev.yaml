@@ -11,3 +11,6 @@ ingress:
 environment: dev
 
 
+
+image:
+  tag: "1.0.0"
